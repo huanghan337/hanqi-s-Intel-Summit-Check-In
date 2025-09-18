@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intel — Team Sustainability Summit Check-In</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <img src="intel-summit.png" alt="Summit Banner" class="hero-img"/>
+    <div class="hero-overlay">
+      <h1>TEAM SUSTAINABILITY SUMMIT</h1>
+      <p class="subtitle">Check-in system for sustainability event attendees</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="attendance-area">
+      <div class="attendance-line">
+        <div class="attendance-icon">👥</div>
+        <div id="attendanceCount" class="attendance-count">Attendance: 0 / 50</div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-outer">
+          <div id="progressFill" class="progress-fill" style="width:0%"></div>
+        </div>
+        <div id="progressPercent" class="progress-percent">0%</div>
+      </div>
+    </section>
+
+    <section class="checkin-card">
+      <div id="greetingMessage" class="greeting-message">Welcome! Please check in below.</div>
+
+      <form id="check-in-form" class="checkin-form">
+        <label class="sr-only" for="attendeeName">Name</label>
+        <input id="attendeeName" name="attendeeName" type="text" placeholder="Enter name..." />
+
+        <label class="sr-only" for="teamSelect">Team</label>
+        <select id="teamSelect" name="team">
+          <option value="">Select Team...</option>
+          <option value="water">Team Water Wise</option>
+          <option value="net">Team Net Zero</option>
+          <option value="power">Team Renewables</option>
+        </select>
+
+        <button type="submit" class="checkin-btn">✅ Check In</button>
+      </form>
+
+      <div id="celebration" class="celebration" style="display:none"></div>
+
+      <hr />
+
+      <div class="team-attendance">
+        <h3>Team Attendance</h3>
+        <div class="team-grid">
+          <div class="team-card team-water" data-team="water">
+            <div class="team-title">🌊 Team Water Wise</div>
+            <div id="waterCount" class="count">0</div>
+          </div>
+          <div class="team-card team-net" data-team="net">
+            <div class="team-title">🌿 Team Net Zero</div>
+            <div id="netCount" class="count">0</div>
+          </div>
+          <div class="team-card team-power" data-team="power">
+            <div class="team-title">⚡ Team Renewables</div>
+            <div id="powerCount" class="count">0</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Demo project for Intel Summit check-in — includes HTML, CSS and JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
